@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>114-2 建中高一第二次定考正式範圍線上練習</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Official Scope Based</p>
+      <h1>114-2 建中高一第二次定考線上練習</h1>
+    </div>
+    <div class="top-actions">
+      <button id="printBtn" class="icon-btn" type="button" title="列印目前試卷" aria-label="列印目前試卷">
+        <span aria-hidden="true">⎙</span>
+      </button>
+      <button id="resetAllBtn" class="icon-btn danger" type="button" title="清除本機作答紀錄" aria-label="清除本機作答紀錄">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" aria-label="科目選單">
+      <label class="field-label" for="examSelect">選擇科目</label>
+      <select id="examSelect"></select>
+      <div id="examMeta" class="exam-meta"></div>
+      <nav id="subjectList" class="subject-list"></nav>
+    </aside>
+
+    <section class="workspace" aria-live="polite">
+      <div class="control-strip">
+        <div>
+          <h2 id="examTitle"></h2>
+          <p id="examSubtitle"></p>
+        </div>
+        <div class="score-panel">
+          <div>
+            <span class="score-label">目前得分</span>
+            <strong id="scoreNow">0 / 0</strong>
+          </div>
+          <div class="progress-shell" aria-hidden="true">
+            <div id="scoreBar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tools-row">
+        <div class="timer" id="timer">00:00</div>
+        <button id="startBtn" class="primary" type="button">開始計時</button>
+        <button id="submitBtn" type="button">交卷評分</button>
+        <button id="showAnswersBtn" type="button">顯示參考答案</button>
+        <button id="clearBtn" type="button">清除此科作答</button>
+      </div>
+
+      <div id="summary" class="summary" hidden></div>
+      <form id="examForm" class="exam-form"></form>
+    </section>
+  </main>
+
+  <script src="exam-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
